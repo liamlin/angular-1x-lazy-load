@@ -10,7 +10,7 @@ if (cloudBuildRoot) {
 
 var cwdAfter = process.cwd();
 
-var appRoot = "/";
+var appRoot = "./";
 
 console.log("## process.cwd() before chdir --> " + cwdBefore);
 if (cloudBuildRoot) {
@@ -23,7 +23,7 @@ var Builder = require('systemjs-builder');
 
 // optional constructor options
 // sets the baseURL and loads the configuration file
-var builder = new Builder("/", 'config.js');
+var builder = new Builder("./", 'config.js');
 
 function build(entry, output) {
     var message = entry + " --> " + output;
